@@ -8,11 +8,8 @@
         <a-marker preset="hiro">
             <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
             
-            <a-box 
-            aterial="color: red" 
-            position="0 -1 0"
-            scale="0.05 0.05 0.05"
-      ></a-box>
+            a-entity obj-model="obj: url(../assets/wuerfel/wuerfel.obj); 
+mtl: url(../assets/wuerfel/wuerfel.obj.mtl)" rotation="0 0 0" scale="0.1 0.1 0.1"/>
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
