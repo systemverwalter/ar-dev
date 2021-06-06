@@ -6,17 +6,15 @@
     <title>dev</title>
     <script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <script>
-        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
-    </script>
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;">
         
        <!-- <a-entity obj-model="obj: url(./assets/wuerfel/texturedMesh.obj); 
 mtl: url(./assets/wuerfel/texturedMesh.mtl)" rotation="0 0 0" scale="20 20 20" gps-entity-place="latitude: 51.61166; longitude: 6.37994;"/> -->
@@ -25,9 +23,8 @@ mtl: url(./assets/wuerfel/texturedMesh.mtl)" rotation="0 0 0" scale="20 20 20" g
 
         <!-- <a-camera gps-camera rotation-reader></a-camera> -->
         <a-camera 
-            gps-camera="minDistance: 3; maxDistance: 500;"
-            
-        rotation-reader> 
+            gps-camera="alert: true, minDistance: 1; maxDistance: 500; gpsMinDistance=2"
+            rotation-reader> 
         </a-camera>
         <!--"simulateLatitude=51.61162; simulateLongitude='6.37997'; minDistance: 3; maxDistance: 500;" -->
 	</a-scene>
