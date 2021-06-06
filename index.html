@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>dev</title>
-    <script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>
-    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GeoAR.js demo</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-</head>
+  </head>
 
-<body style='margin: 0; overflow: hidden;'>
+  <body style="margin: 0; overflow: hidden;">
     <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
-        arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;">
-        
-       <!-- <a-entity obj-model="obj: url(./assets/wuerfel/texturedMesh.obj); 
-mtl: url(./assets/wuerfel/texturedMesh.mtl)" rotation="0 0 0" scale="20 20 20" gps-entity-place="latitude: 51.61166; longitude: 6.37994;"/> -->
-
-<a-box material="color: yellow" rotation="0 0 0" scale="35 45 15" gps-entity-place="latitude: 51.61166; longitude: 6.37994"/>
-
-        <!-- <a-camera gps-camera rotation-reader></a-camera> -->
-        <a-camera 
-            gps-camera="alert: true, minDistance: 1; maxDistance: 500; gpsMinDistance=2"
-            rotation-reader> 
-        </a-camera>
-        <!--"simulateLatitude=51.61162; simulateLongitude='6.37997'; minDistance: 3; maxDistance: 500;" -->
-	</a-scene>
-</body>
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+      <a-text
+        value="This content will always face you."
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="latitude: 51.61166; longitude: 6.37994";"
+      ></a-text>
+      <a-camera gps-camera rotation-reader> </a-camera>
+    </a-scene>
+  </body>
+</html>
