@@ -21,14 +21,14 @@
        <!-- <a-entity obj-model="obj: url(./assets/wuerfel/texturedMesh.obj); 
 mtl: url(./assets/wuerfel/texturedMesh.mtl)" rotation="0 0 0" scale="20 20 20" gps-entity-place="latitude: 51.61166; longitude: 6.37994;"/> -->
 
-<a-box material="color: yellow" scale="25 25 25" gps-entity-place="latitude: 51.61166; longitude: 6.37994"/>
-<a-text value="This will always face the user." scale="75 75 75"
-            gps-entity-place="latitude: 51.61166; longitude: 6.37994"></a-text>
+<a-box material="color: yellow" rotation="0 0 0" scale="35 45 15" gps-entity-place="latitude: 51.61166; longitude: 6.37994"/>
 
         <!-- <a-camera gps-camera rotation-reader></a-camera> -->
         <a-camera 
-        gps-camera="simulateLatitude=51.61162; simulateLongitude='6.37997'; minDistance: 3; maxDistance: 500;" 
+            gps-camera="minDistance: 3; maxDistance: 500;"
+            
         rotation-reader> 
         </a-camera>
+        <!--"simulateLatitude=51.61162; simulateLongitude='6.37997'; minDistance: 3; maxDistance: 500;" -->
 	</a-scene>
 </body>
